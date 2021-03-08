@@ -1,5 +1,4 @@
 declare const styles: {
-  readonly "loginView": string;
+  readonly loginView: string;
 };
 export = styles;
-

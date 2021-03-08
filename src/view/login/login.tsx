@@ -1,13 +1,13 @@
-import { FC, useState, useEffect } from "react";
-import { Button } from "antd";
-import { loginView } from "@view/login/login.module.less";
+import { FC, useState, useEffect } from 'react';
+import { Button } from 'antd';
+import { loginView } from '@view/login/login.module.less';
 
 const LoginView: FC = () => {
   const [age, setAge] = useState(10);
 
   useEffect(() => {
-    console.log("age1:", age);
-    return () => console.log("age2:", age);
+    console.log('age1:', age);
+    return () => console.log('age2:', age);
   }, [age]);
 
   return (

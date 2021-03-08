@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "quotes": [1, "single"],
+    "semi": [1, "always"],
+    "arrow-parens": [1, "as-needed"]
+  }
+}

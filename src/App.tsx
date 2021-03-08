@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
-import routes from "@routes/index";
-import isLoginAuth from "@routes/auth";
-import setDocTitle from "@utils/setDocTitle";
+import { FC } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import routes from '@routes/index';
+import isLoginAuth from '@routes/auth';
+import setDocTitle from '@utils/setDocTitle';
 
 const App: FC = () => {
   return (
