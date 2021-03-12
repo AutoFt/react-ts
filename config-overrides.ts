@@ -1,19 +1,15 @@
-import {
-  override,
-  addWebpackAlias,
-  addLessLoader,
-  fixBabelImports,
-} from "customize-cra";
-import { resolve } from "path";
+import { override, addWebpackAlias, addLessLoader, fixBabelImports } from 'customize-cra';
+import { resolve } from 'path';
 
 module.exports = override(
   addWebpackAlias({
-    "@config": resolve(__dirname, "src/config"),
-    "@routes": resolve(__dirname, "src/routes"),
-    "@view": resolve(__dirname, "src/view"),
-    "@utils": resolve(__dirname, "src/utils"),
+    '@component': resolve(__dirname, 'src/component'),
+    '@config': resolve(__dirname, 'src/config'),
+    '@routes': resolve(__dirname, 'src/routes'),
+    '@view': resolve(__dirname, 'src/view'),
+    '@utils': resolve(__dirname, 'src/utils'),
   }),
-  fixBabelImports("antd", { libraryName: "antd", style: true }),
+  fixBabelImports('antd', { libraryName: 'antd', style: true }),
   addLessLoader(
     {
       lessOptions: {
@@ -21,6 +17,6 @@ module.exports = override(
         // modifyVars: { "@primary-color": "#1DA57A" },
       },
     },
-    { exportLocalsConvention: "camelCase" }
+    { exportLocalsConvention: 'camelCase' }
   )
 );

@@ -1,21 +1,22 @@
-import { FC, useEffect, useState } from 'react';
-import { Button } from 'antd';
+import { FC } from 'react';
+import { Layout } from 'antd';
+import CreateMenu from '@utils/createMenu';
+import LayoutLogo from '@component/layoutLogo';
+import menus from '@config/menu.config';
+const { Sider, Header, Content } = Layout;
 
 const LayoutView: FC = () => {
-  const [age, setAge] = useState(2);
-
-  useEffect(() => {
-    console.log('age3:', age);
-    return () => console.log('age4:', age);
-  }, [age]);
-
   return (
-    <section>
-      <Button type="primary" onClick={() => setAge(1)}>
-        Button
-      </Button>
-      <div>{age}</div>
-    </section>
+    <Layout>
+      <Sider trigger={null} collapsible style={{ height: '100vh' }}>
+        <LayoutLogo />
+        <CreateMenu menus={menus} />
+      </Sider>
+      <Layout>
+        <Header></Header>
+        <Content></Content>
+      </Layout>
+    </Layout>
   );
 };
 
